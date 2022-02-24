@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 09:06:10 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/14 15:05:12 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:51:25 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ typedef struct s_game
 	void	*win;
 	int		height;
 	int		width;
-	int		**map;
+	char		**map;
 	t_img	img;
 }	t_game;
 
 void	game_init(char *fd);
 void	window_init(t_game	*game);
 void	img_init(t_game *game);
-void	map_init(char *fd);
+void	map_init(t_game game, char *file);
 void	get_width(char *fd);
 void	get_height(char *fd);
 
