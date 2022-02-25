@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/24 09:05:23 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/02/24 15:17:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,37 +22,47 @@
 # include "../libft/libft.h"
 # include "../get_next_line/get_next_line.h"
 
+typedef struct s_coord
+{
+	int	x;
+	int	y;
+	int	width;
+	int	height;
+}	t_coord;
+
+/*struct for sprites*/
 typedef struct s_img
 {
 	void	*img;
-	int		*data;
+	char	*data;
+	int		width;
+	int		height;
 	int		size_l;
 	int		bpp;
 	int		endian;
 }	t_img;
 
-typedef struct s_parsing
+/*struct for the map*/
+typedef struct s_map
 {
 	int		fd;
-	int		bool;
-	int		i;
-}	t_parsing;
+	char	*file;
+	char	**map;
+}	t_map;
 
+/*struct principal architecture*/
 typedef struct s_game
 {
 	void	*mlx;
 	void	*win;
 	int		height;
 	int		width;
-	char		**map;
-	t_img	img;
+	t_img	data;
+	t_map	*map;
 }	t_game;
 
-void	game_init(char *fd);
-void	window_init(t_game	*game);
-void	img_init(t_game *game);
-void	map_init(t_game game, char *file);
-void	get_width(char *fd);
-void	get_height(char *fd);
+void	game_init(t_game *game);
+void	map_init(t_game *game);
+void	read_map(t_game *game, char *file);
 
 #endif
