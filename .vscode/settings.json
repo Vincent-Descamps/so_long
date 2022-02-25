@@ -1,3 +1,6 @@
 {
-	"42norminette.trace.server": "off"
+	"42norminette.trace.server": "off",
+	"files.associations": {
+		"so_long.h": "c"
+	}
 }
