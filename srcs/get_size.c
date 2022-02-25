@@ -6,28 +6,26 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 16:50:05 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/14 15:04:03 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/02/25 11:31:30 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	get_width(char *fd)
+static void	get_width(char *fd)
 {
 	t_game	*game;
 
-	game->width = 0;
 	while (fd[game->width] && fd[game->width] != '\n')
 		game->width++;
 }
 
-void	get_height(char *fd)
+static void	get_height(char *fd)
 {
 	t_game	*game;
 	int		i;
 	int		j;
 
-	game->height = 1;
 	i = game->width + 1;
 	while (fd[i] != 0)
 	{
@@ -37,4 +35,10 @@ void	get_height(char *fd)
 		i += game->width + 1;
 		game->height++;
 	}
+}
+
+void	get_size(char *fd)
+{
+	get_width(fd);
+	get_height(fd);
 }

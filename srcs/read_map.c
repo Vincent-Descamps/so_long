@@ -6,17 +6,14 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:26:25 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/25 06:56:01 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/02/25 11:57:32 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	read_map(t_game *game, char *file)
+void	read_map(t_game *game, int fd)
 {
-	int	fd;
-
-	fd = open(file, O_RDONLY);
-	if (fd < 0)
-		printf("No file detected...");
+	game->map->line = get_next_line(fd);
+	printf("%s", game->map->line);
 }

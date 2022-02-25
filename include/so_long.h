@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/24 15:17:42 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/02/25 12:01:28 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <string.h>
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
-# include "../get_next_line/get_next_line.h"
+# include "get_next_line.h"
 
 typedef struct s_coord
 {
@@ -46,6 +46,7 @@ typedef struct s_img
 typedef struct s_map
 {
 	int		fd;
+	char	*line;
 	char	*file;
 	char	**map;
 }	t_map;
@@ -57,12 +58,15 @@ typedef struct s_game
 	void	*win;
 	int		height;
 	int		width;
-	t_img	data;
+	t_img	img;
 	t_map	*map;
 }	t_game;
 
 void	game_init(t_game *game);
 void	map_init(t_game *game);
-void	read_map(t_game *game, char *file);
+void	read_map(t_game *game, int fd);
+void	get_size(char *fd);
+int		ber_extension(char *str);
+char	*get_next_line(int fd);
 
 #endif
