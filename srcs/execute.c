@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_map.c                                         :+:      :+:    :+:   */
+/*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 13:26:25 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/07 14:38:06 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/03/07 14:42:25 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/03/07 14:48:25 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	read_map(t_game *game)
+void	execute(t_game *game)
 {
-	int		fd;
-	char	*str;
-
-	fd = game->fd;
-	str = get_next_line(fd);
-	game->map.width = ft_strlen(str);
-	//printf("%d", game->map.width);
-	while (get_next_line(fd))
-		game->map.height++;
-	//printf("%d", game->map.height);
+	game->mlx = mlx_init();
+	game->win = mlx_new_window(game->mlx, game->map.width * 40, game->map.height * 40, "So_long");
 }

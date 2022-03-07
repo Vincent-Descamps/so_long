@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 16:22:35 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/07 09:24:36 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/03/07 14:36:29 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	game_init(t_game *game)
 {
 	game->mlx = 0;
 	game->win = 0;
+	game->fd = 0;
 	game->map.width = 0;
-	game->map.height = 0;
+	game->map.height = 1;
 }
-f
