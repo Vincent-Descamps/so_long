@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 16:23:11 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/02/14 14:59:01 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/03/04 13:43:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,4 @@
 
 void	window_init(t_game	*game)
 {
-	game->mlx = mlx_init();
-	game->win = mlx_new_window(game->mlx, game->width, game->height, "So_long");
 }
