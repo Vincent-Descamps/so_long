@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/08 10:07:03 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:19:15 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <string.h>
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
+# include "get_next_line.h"
 
 typedef struct s_coord
 {
@@ -64,7 +65,7 @@ typedef struct s_game
 void	game_init(t_game *game);
 void	map_init(t_game *game);
 void	read_map(t_game *game, int fd);
-int		get_size(t_game *game, char **argv);
+//void	execute(t_game *game);
 int		ber_extension(char *str);
 char	*get_next_line(int fd);
 
