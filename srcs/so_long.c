@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/07 14:51:56 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:07:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	game.fd = open(argv[1], O_RDONLY);
 	if (game.fd < 1)
 		printf("cannot access file");
-	read_map(&game);
+	read_map(&game, game.fd);
 	execute(&game);
 	return (0);
 }
