@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/08 16:42:54 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/03/08 11:32:10 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/03/08 11:49:58 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_game	game;
+	size_t	i;
 
-	if (argc != 2)
+	i = 0;
+	while (s1[i] || s2[i])
 	{
-		printf("Invalid Number of Arguments");
-		exit (1);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
-	if (ber_extension(argv[1]) == 1)
-	{
-		printf("Make sure the map is a .ber file");
-		exit (1);
-	}
-	game_init(&game);
-	read_map(&game, argv[1]);
-	//execute(&game);
 	return (0);
 }
