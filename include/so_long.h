@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/08 17:47:52 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/04/11 11:05:43 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,8 @@ typedef struct s_game
 }	t_game;
 
 void	game_init(t_game *game);
-void	map_init(t_game *game);
 void	read_map(t_game *game, char *file);
-void	check_wall(char *str);
+void	check_map(t_game *game);
 //void	execute(t_game *game);
 int		ber_extension(char *str);
 char	*get_next_line(int fd);
