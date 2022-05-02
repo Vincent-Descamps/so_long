@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/04/22 10:25:06 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/02 13:03:46 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	read_map(t_game *game, char *file);
 void	check_map(t_game *game);
 //void	execute(t_game *game);
 int		ber_extension(char *str);
+int		ft_error(int n);
 char	*get_next_line(int fd);
 
 #endif

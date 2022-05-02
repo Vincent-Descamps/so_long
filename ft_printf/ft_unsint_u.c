@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_varunsint_u.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:19:02 by vdescamp         ###   ########.fr       */
+/*   Created: 2021/11/12 13:16:01 by vdescamp          #+#    #+#             */
+/*   Updated: 2021/11/16 08:49:13 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+static void	ft_putchar(char c)
 {
-	t_game	game;
+	write(1, &c, 1);
+}
 
-	if (argc != 2)
-		ft_error(1);
-	if (ber_extension(argv[1]) == 1)
-		ft_error(2);
-	game_init(&game);
-	read_map(&game, argv[1]);
-	check_map(&game);
-	//execute(&game);
-	return (0);
+int	ft_unsint_u(unsigned int u)
+{
+	int	j;
+
+	j = 0;
+	if (u >= 10)
+		j += ft_unsint_u(u / 10);
+	u = (u % 10) + '0';
+	ft_putchar(u);
+	j++;
+	return (j);
 }

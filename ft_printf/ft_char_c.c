@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_varchar_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:19:02 by vdescamp         ###   ########.fr       */
+/*   Created: 2021/11/10 11:43:20 by vdescamp          #+#    #+#             */
+/*   Updated: 2021/11/16 08:46:29 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+int	ft_char_c(char c)
 {
-	t_game	game;
+	int	j;
 
-	if (argc != 2)
-		ft_error(1);
-	if (ber_extension(argv[1]) == 1)
-		ft_error(2);
-	game_init(&game);
-	read_map(&game, argv[1]);
-	check_map(&game);
-	//execute(&game);
-	return (0);
+	j = 0;
+	write(1, &c, 1);
+	j++;
+	return (j);
 }

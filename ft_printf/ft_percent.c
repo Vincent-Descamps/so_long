@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_varpercent.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:19:02 by vdescamp         ###   ########.fr       */
+/*   Created: 2021/11/12 14:04:26 by vdescamp          #+#    #+#             */
+/*   Updated: 2021/11/16 08:47:45 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+static void	ft_putchar(char c)
 {
-	t_game	game;
+	write(1, &c, 1);
+}
 
-	if (argc != 2)
-		ft_error(1);
-	if (ber_extension(argv[1]) == 1)
-		ft_error(2);
-	game_init(&game);
-	read_map(&game, argv[1]);
-	check_map(&game);
-	//execute(&game);
-	return (0);
+int	ft_percent(char c)
+{
+	int	j;
+
+	j = 0;
+	ft_putchar(c);
+	j++;
+	return (j);
 }
