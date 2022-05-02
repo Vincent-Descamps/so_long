@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:26:25 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/04/13 16:05:20 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:51:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	map_size(t_game *game, char *file)
 	while (get_next_line(fd))
 		height++;
 	close(fd);
-	game->map.width = width;
+	game->map.width = width - 1;
 	game->map.height = height;
 }
 
