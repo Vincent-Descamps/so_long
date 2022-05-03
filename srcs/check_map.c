@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 13:12:27 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:45:41 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/03 13:07:37 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ static void	check_char(t_game *game, char s)
 	if (s != '1' && s != 'C' && s != 'E' && s != 'P')
 		ft_error(6);
 	if (s == 'C')
-		game->map.collect = 1;
+		game->map.c = 1;
 	if (s == 'E')
-		game->map.exit = 1;
+		game->map.e = 1;
 	if (s == 'P')
-		game->map.player = 1;
+		game->map.p = 1;
 }
 
 static void	check_wall(t_game *game, char **map)
@@ -68,6 +68,6 @@ void	check_map(t_game *game)
 {
 	check_rect(game, game->map.map);
 	check_wall(game, game->map.map);
-	if (game->map.collect != 1 || game->map.exit != 1 || game->map.player != 1)
+	if (game->map.c != 1 || game->map.e != 1 || game->map.p != 1)
 		ft_error(7);
 }

@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:03:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/03 13:06:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ typedef struct s_img
 	int		size_l;
 	int		bpp;
 	int		endian;
+	void	*player;
+	void	*collect;
+	void	*exit;
+	void	*wall;
 }	t_img;
 
 /*struct for the map*/
@@ -46,15 +50,15 @@ typedef struct s_map
 	int		height;
 	int		width;
 	char	**map;
-	int		player;
-	int		exit;
-	int		collect;
+	int		p;
+	int		e;
+	int		c;
 }	t_map;
 
 /*struct principal architecture*/
 typedef struct s_game
 {
-	void	*mlx;
+	void	*mlx_ptr;
 	void	*win;
 	t_img	img;
 	t_map	map;
@@ -63,9 +67,9 @@ typedef struct s_game
 void	game_init(t_game *game);
 void	read_map(t_game *game, char *file);
 void	check_map(t_game *game);
-//void	execute(t_game *game);
 int		ber_extension(char *str);
 int		ft_error(int n);
 char	*get_next_line(int fd);
+void	load_game(t_game *game);
 
 #endif

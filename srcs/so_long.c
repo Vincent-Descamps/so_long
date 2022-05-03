@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:19:02 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/03 12:13:20 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	main(int argc, char **argv)
 	game_init(&game);
 	read_map(&game, argv[1]);
 	check_map(&game);
-	//execute(&game);
+	load_game(&game);
 	return (0);
 }

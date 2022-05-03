@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:59:54 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/02 13:41:12 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/03 11:19:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_error(int n)
 	if (n == 6)
 		printf("Error\n** Unknown Character in the structure of the Map. **");
 	if (n == 7)
-		printf("Error\n** Map File is incomplete, Some charaters are missing **");
+		printf("Error\n** Map File is incomplete, Charaters are missing **");
 	exit (1);
 	return (0);
 }
