@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/03 13:06:48 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/04 14:03:19 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct s_img
 	void	*collect;
 	void	*exit;
 	void	*wall;
+	void	*floor;
 }	t_img;
 
 /*struct for the map*/
