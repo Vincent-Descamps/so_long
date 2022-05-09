@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/09 11:34:22 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:47:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ typedef struct s_img
 	int		size_l;
 	int		bpp;
 	int		endian;
-	char	*player;
-	char	*collect;
-	char	*exit;
-	char	*wall;
-	char	*floor;
+	void	*player;
+	void	*collect;
+	void	*exit;
+	void	*wall;
+	void	*floor;
 }	t_img;
 
 /*struct for the map*/
