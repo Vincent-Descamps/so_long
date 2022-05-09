@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:22:57 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/09 11:32:09 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:35:05 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	*img_init_util(t_game *game, char *filename)
 {
-	char	**img;
-	int		x;
-	int		y;
+	void	*img;
+	int		width;
+	int		height;
 
-	x = 36;
-	y = 36;
-	img = mlx_xpm_file_to_image(game->mlx_ptr, filename, &x, &y);
+	width = 0;
+	height = 0;
+	img = mlx_xpm_file_to_image(game->mlx_ptr, filename, &width, &height);
+	if (height == 0 || width == 0)
+		ft_error(1);
+	printf("%d-----%d\n", width, height);
 	return (img);
 }
 
@@ -47,5 +50,5 @@ void	window_init(t_game *game)
 void	load_game(t_game *game)
 {
 	window_init(game);
-	img_init(&game->img);
+	img_init(game);
 }
