@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:22:57 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/04 14:10:11 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:32:09 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*img_init_util(t_game *game, char *filename)
 {
-	void	*img;
+	char	**img;
 	int		x;
 	int		y;
 
-	x = 0;
-	y = 0;
+	x = 36;
+	y = 36;
 	img = mlx_xpm_file_to_image(game->mlx_ptr, filename, &x, &y);
-	printf("%d-----%d\n", &x, &y);
 	return (img);
 }
 
