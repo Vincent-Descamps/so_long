@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:22:57 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/09 14:18:19 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:29:22 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ void	img_init(t_game *game)
 {
 	int	width;
 	int	height;
+	int	x;
+	int	y;
 
+	x = game->map.width * 36;
+	y = game->map.height * 36;
 	game->img.wall = mlx_xpm_file_to_image
 		(game->mlx_ptr, "../assets/lava_wall_1.xpm", &width, &height);
 	game->img.floor = mlx_xpm_file_to_image
