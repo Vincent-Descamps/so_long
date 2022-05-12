@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:26:25 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/10 14:27:51 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 17:20:58 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	read_map(t_game *game, char *file)
 	while (i < game->map.height)
 		game->map.map[i++] = get_next_line(fd);
 	i = 0;
-	/*while (i < game->map.height)
+	while (i < game->map.height)
 		printf("%s", game->map.map[i++]);
-		*/
 }

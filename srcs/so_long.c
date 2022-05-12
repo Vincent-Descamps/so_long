@@ -6,18 +6,11 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/10 15:20:40 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 14:04:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
-int	deal_key(int key_code, t_game *game)
-{
-	if (key_code == KEY_ESC)
-		exit(0);
-	return (0);
-}
 
 int	main(int argc, char **argv)
 {

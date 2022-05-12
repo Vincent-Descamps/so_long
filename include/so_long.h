@@ -6,16 +6,24 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 10:42:30 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 14:23:04 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# define X_EVENT_KEY_PRESS		2
-# define X_EVEN_KEY_EXIT		17
-# define KEY_ESC				53
+# define X_EVENT_KEY_PRESS	2
+# define X_EVEN_KEY_EXIT	17
+# define KEY_ESC			53
+# define KEY_W				13
+# define KEY_A				0
+# define KEY_S				1
+# define KEY_D				2
+# define KEY_UP				126
+# define KEY_DOWN			125
+# define KEY_LEFT			123
+# define KEY_RIGHT			124
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -55,6 +63,7 @@ typedef struct s_map
 	int		height;
 	int		width;
 	char	**map;
+	int		**p_pos;
 	int		p;
 	int		e;
 	int		c;
@@ -78,5 +87,5 @@ char	*get_next_line(int fd);
 void	load_game(t_game *game);
 int		draw_map(t_game *game);
 int		main_loop(t_game *game);
-
+int		deal_key(int key_code, t_game *game);
 #endif
