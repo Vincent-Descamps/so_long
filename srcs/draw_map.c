@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:38:45 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 10:50:43 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:23:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	draw_map(t_game *game)
 	int	i;
 	int	j;
 
-	draw_background (game->mlx_ptr, game->map.width * 36, game->map.height *36);
+	draw_background (game->mlx_ptr, game->map.width * 36, game->map.height * 36);
 	i = 0;
 	while (i < game->map.height)
 	{
