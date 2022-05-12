@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/10 11:58:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 09:46:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_coord
 typedef struct s_img
 {
 	void	*img;
-	char	*data;
+	int		*data;
 	int		size_l;
 	int		bpp;
 	int		endian;
