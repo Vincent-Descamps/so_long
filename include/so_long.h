@@ -6,12 +6,16 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 09:46:48 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 10:42:30 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
+
+# define X_EVENT_KEY_PRESS		2
+# define X_EVEN_KEY_EXIT		17
+# define KEY_ESC				53
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -72,6 +76,7 @@ int		ber_extension(char *str);
 int		ft_error(int n);
 char	*get_next_line(int fd);
 void	load_game(t_game *game);
-void	draw_map(t_game *game);
+int		draw_map(t_game *game);
+int		main_loop(t_game *game);
 
 #endif

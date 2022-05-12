@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:38:45 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 09:45:56 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 10:42:21 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	draw_img(t_game *game, t_coord coord, char ch)
 		mlx_put_image_to_window(game->mlx_ptr, game->win, game->img.player, coord.x, coord.y);
 }
 
-void	draw_map(t_game *game)
+int	draw_map(t_game *game)
 {
 	int	i;
 	int	j;
@@ -64,12 +64,18 @@ void	draw_map(t_game *game)
 				draw_img(game, (t_coord){j * 36, i * 36}, 'E');
 			if (game->map.map[i][j] == 'C')
 				draw_img(game, (t_coord){j * 36, i * 36}, 'C');
-			if (game->map.map[i][j] == 'A')
-				draw_img(game, (t_coord){j * 36, i * 36}, 'A');
 			if (game->map.map[i][j] == 'P')
 				draw_img(game, (t_coord){j * 36, i * 36}, 'P');
 			j++;
 		}
 		i++;
 	}
+	return (0);
+}
+
+int	main_loop(t_game *game)
+{
+	draw_map(game);
+	mlx_put_image_to_window(game->mlx_ptr, game->win, game->img.img, 0, 0);
+	return (0);
 }
