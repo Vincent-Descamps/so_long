@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:16:48 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 17:55:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/12 18:01:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	move(t_game *game, int key_code)
 						game->map.map[i][j] = '0';
 						game->map.map[i][j + 1] = 'P';
 						printf("Right\n");
-						break;
+						j++;
 					}
 				}
 				else if (key_code == KEY_LEFT || key_code == KEY_A)
