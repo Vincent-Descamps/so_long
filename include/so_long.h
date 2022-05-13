@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 14:23:04 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/13 17:06:34 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define KEY_DOWN			125
 # define KEY_LEFT			123
 # define KEY_RIGHT			124
+# define TILE_SIZE			50
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -63,7 +64,6 @@ typedef struct s_map
 	int		height;
 	int		width;
 	char	**map;
-	int		**p_pos;
 	int		p;
 	int		e;
 	int		c;
@@ -74,6 +74,7 @@ typedef struct s_game
 {
 	void	*mlx_ptr;
 	void	*win;
+	int		move;
 	t_img	img;
 	t_map	map;
 }	t_game;
@@ -88,4 +89,8 @@ void	load_game(t_game *game);
 int		draw_map(t_game *game);
 int		main_loop(t_game *game);
 int		deal_key(int key_code, t_game *game);
+void	move_right(t_game *game, int i, int j);
+void	move_left(t_game *game, int i, int j);
+void	move_up(t_game *game, int i, int j);
+void	move_down(t_game *game, int i, int j);
 #endif
