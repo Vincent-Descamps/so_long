@@ -6,18 +6,15 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:16:48 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 17:55:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/13 14:48:32 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	move(t_game *game, int key_code)
+void	move(t_game *game, int key_code, int i, int j)
 {
-	int		i;
-	int		j;
-	char	p_pos;
-
+	printf("%d", game->map.c);
 	i = -1;
 	while (++i < game->map.height)
 	{
@@ -28,41 +25,17 @@ void	move(t_game *game, int key_code)
 			{
 				if (key_code == KEY_RIGHT || key_code == KEY_D)
 				{
-					if (game->map.map[i][j + 1] == '0')
-					{
-						game->map.map[i][j] = '0';
-						game->map.map[i][j + 1] = 'P';
-						printf("Right\n");
-						break;
-					}
+					move_right(game, i, j);
+					j++;
 				}
 				else if (key_code == KEY_LEFT || key_code == KEY_A)
-				{
-					if (game->map.map[i][j - 1] == '0')
-					{
-						game->map.map[i][j] = '0';
-						game->map.map[i][j - 1] = 'P';
-						printf("Left\n");
-					}
-				}
+					move_left(game, i, j);
 				else if (key_code == KEY_UP || key_code == KEY_W)
-				{
-					if (game->map.map[i - 1][j] == '0')
-					{
-						game->map.map[i][j] = '0';
-						game->map.map[i - 1][j] = 'P';
-						printf("Up\n");
-					}
-				}
+					move_up(game, i, j);
 				else if (key_code == KEY_DOWN || key_code == KEY_S)
 				{
-					if (game->map.map[i + 1][j] == '0')
-					{
-						game->map.map[i][j] = '0';
-						game->map.map[i + 1][j] = 'P';
-						printf("Down\n");
-						i++;
-					}
+					move_down(game, i, j);
+					i++;
 				}
 			}
 		}
@@ -71,8 +44,16 @@ void	move(t_game *game, int key_code)
 
 int	deal_key(int key_code, t_game *game)
 {
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
 	if (key_code != KEY_ESC)
-		move(game, key_code);
+	{
+		move(game, key_code, i, j);
+		game->move += 1;
+	}
 	if (key_code == KEY_ESC)
 	{
 		printf("Thanks for playing!\n");
