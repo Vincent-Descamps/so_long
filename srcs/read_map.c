@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:26:25 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/12 17:20:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:40:59 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	read_map(t_game *game, char *file)
 
 	i = 0;
 	map_size(game, file);
-	//printf("%d....%d\n", game->map.width, game->map.height);
 	game->map.map = (char **)malloc(sizeof(char *) * game->map.height);
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
@@ -51,5 +50,5 @@ void	read_map(t_game *game, char *file)
 		game->map.map[i++] = get_next_line(fd);
 	i = 0;
 	while (i < game->map.height)
-		printf("%s", game->map.map[i++]);
+		ft_printf("%s", game->map.map[i++]);
 }

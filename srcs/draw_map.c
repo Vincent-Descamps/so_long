@@ -6,11 +6,23 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:38:45 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 16:01:55 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:34:49 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+
+void	print_string(t_game *game)
+{
+	int		color = 0x000814;
+	char	*s;
+	int		x = TILE_SIZE * (game->map.width - 2);
+	int		y = TILE_SIZE * (game->map.height - 1);
+
+	s = ft_strcat(ft_itoa(game->move), " Steps");
+	mlx_string_put(game->mlx_ptr, game->win, x, y, color, s);
+	free(s);
+}
 
 void	draw_img(t_game *game, t_coord coord, char ch)
 {
@@ -62,5 +74,6 @@ int	draw_map(t_game *game)
 int	main_loop(t_game *game)
 {
 	draw_map(game);
+	print_string(game);
 	return (0);
 }

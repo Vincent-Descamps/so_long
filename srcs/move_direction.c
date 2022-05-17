@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:39:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 14:52:32 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:54:13 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	move_right(t_game *game, int i, int j)
 			game->map.c -= 1;
 		game->map.map[i][j] = '0';
 		game->map.map[i][j + 1] = 'P';
-		printf("Right\n");
+		game->move += 1;
 	}
 	if (game->map.map[i][j + 1] == 'E' && game->map.c == 0)
 	{
-		printf("you won in %d moves!!!", game->move);
+		ft_printf("you won in %d moves!!!\n", game->move);
 		exit (0);
 	}
 }
@@ -37,11 +37,11 @@ void	move_left(t_game *game, int i, int j)
 			game->map.c -= 1;
 		game->map.map[i][j] = '0';
 		game->map.map[i][j - 1] = 'P';
-		printf("Left\n");
+		game->move += 1;
 	}
 	if (game->map.map[i][j - 1] == 'E' && game->map.c == 0)
 	{
-		printf("you won in %d moves!!!", game->move);
+		ft_printf("you won in %d moves!!!\n", game->move);
 		exit (0);
 	}
 }
@@ -54,11 +54,11 @@ void	move_up(t_game *game, int i, int j)
 			game->map.c -= 1;
 		game->map.map[i][j] = '0';
 		game->map.map[i - 1][j] = 'P';
-		printf("Up\n");
+		game->move += 1;
 	}
 	if (game->map.map[i - 1][j] == 'E' && game->map.c == 0)
 	{
-		printf("you won in %d moves!!!", game->move);
+		ft_printf("you won in %d moves!!!\n", game->move);
 		exit (0);
 	}
 }
@@ -71,11 +71,11 @@ void	move_down(t_game *game, int i, int j)
 			game->map.c -= 1;
 		game->map.map[i][j] = '0';
 		game->map.map[i + 1][j] = 'P';
-		printf("Down\n");
+		game->move += 1;
 	}
 	if (game->map.map[i + 1][j] == 'E' && game->map.c == 0)
 	{
-		printf("you won in %d moves!!!", game->move);
+		ft_printf("you won in %d moves!!!\n", game->move);
 		exit (0);
 	}
 }

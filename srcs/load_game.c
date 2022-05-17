@@ -6,13 +6,13 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:22:57 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 17:04:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:03:36 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-/*
-void	img_init(t_game *game)
+
+void	img_init_36(t_game *game)
 {
 	int	width;
 	int	height;
@@ -28,8 +28,8 @@ void	img_init(t_game *game)
 	game->img.player = mlx_xpm_file_to_image
 		(game->mlx_ptr, "../assets/player_test.xpm", &width, &height);
 }
-*/
-void	img_init(t_game *game)
+
+void	img_init_50(t_game *game)
 {
 	int	width;
 	int	height;
@@ -60,5 +60,8 @@ void	window_init(t_game *game)
 void	load_game(t_game *game)
 {
 	window_init(game);
-	img_init(game);
+	if (TILE_SIZE == 36)
+		img_init_36(game);
+	else if (TILE_SIZE == 50)
+		img_init_50(game);
 }

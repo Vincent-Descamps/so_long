@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:05:14 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 17:06:34 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:05:18 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
 # include "get_next_line.h"
+# include "../ft_printf/ft_printf.h"
 
 typedef struct s_coord
 {
@@ -93,4 +94,5 @@ void	move_right(t_game *game, int i, int j);
 void	move_left(t_game *game, int i, int j);
 void	move_up(t_game *game, int i, int j);
 void	move_down(t_game *game, int i, int j);
+int		ft_printf(const char *format, ...);
 #endif

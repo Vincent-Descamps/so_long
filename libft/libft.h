@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:19:10 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/08 11:36:51 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:41:40 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_lstsize(t_list *lst);
 //Fonctions char
 char	*ft_strchr(const char *s, int c);
+char	*ft_strcat(char *dest, char *src);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s1);

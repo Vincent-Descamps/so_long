@@ -6,11 +6,16 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 14:37:27 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:13:39 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+
+int	m_close(t_game *game)
+{
+	exit (0);
+}
 
 int	main(int argc, char **argv)
 {
@@ -26,7 +31,7 @@ int	main(int argc, char **argv)
 	load_game(&game);
 	draw_map(&game);
 	mlx_hook(game.win, X_EVENT_KEY_PRESS, 0, &deal_key, &game);
-	mlx_hook(game.win, X_EVEN_KEY_EXIT, 0, &close, &game);
+	mlx_hook(game.win, X_EVEN_KEY_EXIT, 0, &m_close, &game);
 	mlx_loop_hook(game.mlx_ptr, &main_loop, &game);
 	mlx_loop(game.mlx_ptr);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:24:42 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/03/07 14:10:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:41:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (j);
 }
-
+/*
 int	main(void)
 {
 	ft_printf("******************\n");
@@ -47,3 +47,4 @@ int	main(void)
 	printf("resultats printf : %s\n", "aknjlkn");
 	return (0);
 }
+*/
