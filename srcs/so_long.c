@@ -6,13 +6,13 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:04:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/17 13:13:39 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/23 12:15:07 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	m_close(t_game *game)
+int	m_close(void)
 {
 	exit (0);
 }

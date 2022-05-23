@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 13:12:27 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/13 14:29:06 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/23 12:15:46 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	check_rect(t_game *game, char **map)
 {
-	int	i;
-	int	ref;
+	int		i;
+	size_t	ref;
 
 	i = 0;
 	ref = game->map.width + 1;

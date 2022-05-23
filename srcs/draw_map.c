@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:38:45 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/17 15:34:49 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/23 12:05:54 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	print_string(t_game *game)
 {
-	int		color = 0x000814;
+	int		color;
 	char	*s;
-	int		x = TILE_SIZE * (game->map.width - 2);
-	int		y = TILE_SIZE * (game->map.height - 1);
+	int		x;
+	int		y;
 
+	color = 0x000814;
+	x = TILE_SIZE * (game->map.width - 2);
+	y = TILE_SIZE * (game->map.height - 1);
 	s = ft_strcat(ft_itoa(game->move), " Steps");
 	mlx_string_put(game->mlx_ptr, game->win, x, y, color, s);
 	free(s);
