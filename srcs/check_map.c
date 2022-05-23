@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 13:12:27 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/05/23 12:15:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/05/23 15:03:33 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static void	check_char(t_game *game, char s)
 	if (s == 'C')
 		game->map.c += 1;
 	if (s == 'E')
-		game->map.e = 1;
+		game->map.e += 1;
 	if (s == 'P')
-		game->map.p = 1;
+		game->map.p += 1;
 }
 
 static void	check_wall(t_game *game, char **map)
