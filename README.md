@@ -1,3 +1,3 @@
 # so_long
 
-https://user-images.githubusercontent.com/84902491/197145898-9828bc2d-ae65-4ce6-90a4-a92f0b3b0a14.mov
+![Screen Recording 2022-10-21 at 9 57 56 AM](https://user-images.githubusercontent.com/84902491/197146920-42312bd6-7648-4696-a0d1-da1f46605dcd.gif)
